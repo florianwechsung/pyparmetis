@@ -72,7 +72,7 @@ def ParMETIS_V3_PartKway(vtxdist, xadj, adjncy, nparts, comm):
     n_part = len(xadj)-1
     edgecut, part = ParMETIS_V3_PartKway_helper(vtxdist, xadj, adjncy, nparts, comm, n_part)
     if edgecut==-1:
-        raise RuntimeError, "ParMETIS internal error"
+        raise RuntimeError("ParMETIS internal error")
     return edgecut, part
 %}
 
