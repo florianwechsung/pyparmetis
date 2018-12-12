@@ -22,12 +22,12 @@ nparts = 3
 edgecut, part = ParMETIS_V3_PartKway(vtxdist, xadj, adjncy, nparts, MPI.COMM_WORLD)
 
 if rank==0:
-    print part
+    print(part)
 
 if rank==1:
     time.sleep(0.1)
-    print part
+    print(part)
 
 if rank==2:
     time.sleep(0.2)
-    print part
+    print(part)
